@@ -26,3 +26,21 @@ print('asdfasdf' + ('-' * 25))
 print('Una línea super larga en la que sueltas un rollo que te pasas'
       ' y sigue y sigue y sigue sin parar hasta el infinito y más allá')
 
+print(nombre[0] + nombre[1])
+
+print(nombre[-2] + nombre[-1])
+
+dni = '12345678A'
+
+print(dni[-1])
+
+print(len(dni))
+
+print(dni[len(dni)-1])
+
+print(nombre[0:4])
+
+print(nombre[:4] + nombre[4:])
+
+# print(nombre[42])
+
