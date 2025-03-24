@@ -44,3 +44,11 @@ print(nombre[:4] + nombre[4:])
 
 # print(nombre[42])
 
+print(1, 5, 3, 3, 4, 56, 76, sep=',', end=': ')
+print('Después')
+
+dias = 31
+mes = 'Marzo'
+
+print(mes + ' tiene ' + str(dias) + ' días')
+print(f'{mes} tiene {dias} días')

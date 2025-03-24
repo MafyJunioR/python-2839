@@ -87,7 +87,7 @@ while i < len(palabras):
 for palabra in palabras:
     print(palabra)
 
-i = 1
+i = 2
 while i < 11:
     numero = i
     print(numero)
