@@ -1,10 +1,10 @@
-lista = [ 1, 2, 3, 4, 5 ]
+cuadrados = [ 1, 2, 3, 4, 5 ]
 
-print(lista)
+print(cuadrados)
 
-print(lista[3])
+print(cuadrados[3])
 
-print(lista[2:5])
+print(cuadrados[2:5])
 
 palabras = [ 'Uno', 'Dos', 'Tres', 'Cuatro', 'Cinco' ]
 
@@ -12,7 +12,7 @@ print(palabras)
 
 print(palabras[2:5])
 
-print(lista + palabras)
+print(cuadrados + palabras)
 
 palabras = palabras + ['Sis']
 
@@ -95,3 +95,18 @@ while i < 11:
 
 for numero in range(2, 10 + 1, 2):
     print(numero)
+
+print([x**2 for x in [4, 7, 1, 10]])
+
+cuadrados = []
+
+for x in range(20):
+    cuadrados.append(x**2)
+
+print(cuadrados)
+
+del cuadrados[2:5]
+
+print(cuadrados)
+
+print([(x, y) for x in [1,2,3] for y in [3,1,4] if x != y])

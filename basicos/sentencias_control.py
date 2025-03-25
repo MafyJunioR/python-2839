@@ -74,7 +74,7 @@ class Punto:
         self.x = x
         self.y = y
 
-punto = Punto(5, 0)
+punto = Punto(5, 5)
 
 print(punto.x, punto.y)
 
@@ -83,5 +83,24 @@ match punto:
         print('No tiene valor')
     case Punto(x=x, y=0):
         print('x = ', x)
+    case Punto(x=x, y=y) if x == y:
+        print('Diagonal')
     case Punto(x=x, y=y):
         print(punto.x, punto.y)
+
+from enum import Enum
+class Color(Enum):
+    ROJO = 'rojo'
+    VERDE = 'verde'
+    AZUL = 'azul'
+
+mi_color = Color.AZUL
+
+match mi_color:
+    case Color.ROJO:
+        print('El primero')
+    case Color.VERDE:
+        print('El segundo')
+    case _:
+        print(mi_color.value)
+
