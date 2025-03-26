@@ -64,6 +64,8 @@ print(tablero)
 
 print(tablero[0][5])
 
+tablero = [[fila[i] for fila in tablero] for i in range(len(tablero))]
+
 y = 0
 
 while y < len(tablero):
