@@ -22,13 +22,13 @@ def procesar(opcion):
         case 1:
             listado()
         case 2:
-            print('Buscar por id')
+            buscar_por_id()
         case 3:
             insertar()
         case 4:
-            print('Modificar')
+            modificar()
         case 5:
-            print('Borrar')
+            borrar()
         case 0:
             print('Salir')
             consultar = False
@@ -36,6 +36,33 @@ def procesar(opcion):
             print('OPCIÓN NO RECONOCIDA')
     
     input('Dale a enter para continuar')
+
+def listado():
+    global contactos
+
+    print('Listado')
+
+    formato = '%3s %-10s %-10s'
+
+    print(formato % ('Id', 'Nombre', 'Apellido'))
+
+    for id in contactos:
+        print(formato % (id, contactos[id]['nombre'], contactos[id]['apellido']))
+
+def buscar_por_id():
+    global contactos
+
+    print('Buscar por id')
+
+    id = int(input('Dime el id a buscar: '))
+
+    contacto = contactos[id]
+
+    print(f'''
+id: {id}
+nombre: {contacto['nombre']}
+apellido: {contacto['apellido']}
+    ''')
 
 def insertar():
     global contactos
@@ -49,17 +76,25 @@ def insertar():
 
     contactos[id] = { 'nombre': nombre, 'apellido': apellido }
 
-def listado():
+def modificar():
+    global contactos
+    
+    print('Modificar')
+
+    id = int(input('Id: '))
+    nombre = input('Nombre: ')
+    apellido = input('Apellido: ')
+
+    contactos[id] = { 'nombre': nombre, 'apellido': apellido }
+
+def borrar():
     global contactos
 
-    print('Listado')
+    print('Borrar')
 
-    formato = '%3s %-10s %-10s'
+    id = int(input('Dime el id a borrar: '))
 
-    print(formato % ('Id', 'Nombre', 'Apellido'))
-
-    for id in contactos:
-        print(formato % (id, contactos[id]['nombre'], contactos[id]['apellido']))
+    del contactos[id]
 
 # PROGRAMA PRINCIPAL
 
