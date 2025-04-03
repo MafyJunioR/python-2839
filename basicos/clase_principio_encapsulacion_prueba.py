@@ -20,3 +20,5 @@ print(p1 is p2) # Son el mismo?
 print(p1 == p2) # Son iguales?
 
 print(p1.__hash__(), p2.__hash__())
+
+print(p + p2)

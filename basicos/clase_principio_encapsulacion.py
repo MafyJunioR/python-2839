@@ -1,5 +1,5 @@
 class Producto:
-    def __init__(self, nombre, precio):
+    def __init__(self, nombre: str, precio: float):
         self.nombre = nombre
         self.precio = precio
 
@@ -24,6 +24,9 @@ class Producto:
             raise ValueError('No se acepta un precio None ni menor que 0')
 
         self.__precio = valor
+
+    def __add__(self, otro):
+        return Producto(f'{self.nombre} + {otro.nombre}', self.precio + otro.precio)
 
     def __eq__(self, otro):
         return isinstance(otro, Producto) and self.nombre == otro.nombre and self.precio == otro.precio
